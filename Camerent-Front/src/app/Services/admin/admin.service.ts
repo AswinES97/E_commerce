@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
-  serverUrl = 'https://camerent-g3-backend.herokuapp.com';
+  serverUrl = environment.serverUrl
   constructor(public adminService:HttpClient) { }
 
   // add product to database 

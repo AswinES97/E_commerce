@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  serverUrl = 'https://camerent-g3-backend.herokuapp.com';
+  serverUrl = environment.serverUrl
+  
   constructor(private http:HttpClient) { }
 
   // add to cart

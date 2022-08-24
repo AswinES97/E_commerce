@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  serverUrl = 'https://camerent-g3-backend.herokuapp.com';
+  serverUrl = environment.serverUrl
+
   constructor(private http:HttpClient, private _router:Router) { }
   // login call
   loginUser(data:any){
